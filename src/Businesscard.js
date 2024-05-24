@@ -3,6 +3,15 @@ import Avatar from "@mui/material/Avatar";
 import imgSrc from "./avatar/th.jpg";
 import { Button, Card, CardContent, Grid, Typography } from "@mui/material";
 
+const skills = [
+  "JavaScript",
+  "React",
+  "HTML-CSS",
+  "NodeJS",
+  "SQL",
+  "MongoDB",
+  "Redux",
+];
 const Businesscard = () => {
   return (
     <Card
@@ -19,26 +28,45 @@ const Businesscard = () => {
         <Avatar
           src={imgSrc}
           alt="Tarek Habash"
-          sx={{ width: 86, height: 86 }}
+          sx={{ width: 96, height: 96 }}
         />
       </Grid>
 
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography
+          gutterBottom
+          variant="h5"
+          component="div"
+          sx={{ fontFamily: "'Montserrat', sans-serif" }}
+        >
           Tarek Habash
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography
+          variant="body2"
+          color="text.secondary"
+          sx={{ fontFamily: "'Montserrat', sans-serif" }}
+        >
           5020, Salzburg, Austria
         </Typography>
-        <Typography gutterBottom variant="body2" color="text.secondary">
+        <Typography
+          variant="body2"
+          color="text.secondary"
+          sx={{ fontFamily: "'Montserrat', sans-serif" }}
+        >
           Birthday: 10.07.1997
         </Typography>
 
-        <Typography variant="h5" component="div">
+        <Typography
+          gutterBottom
+          variant="h5"
+          component="div"
+          marginTop={4}
+          sx={{ fontFamily: "'Montserrat', sans-serif" }}
+        >
           Coding Skills
         </Typography>
         <Grid spacing={4}>
-          {["JavaScript", "React", "HTML-CSS"].map((skill, index) => (
+          {skills.map((skill, index) => (
             <Button variant="contained" sx={{ margin: "2px" }}>
               {skill}
             </Button>
